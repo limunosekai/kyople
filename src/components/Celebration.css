@@ -1,24 +1,34 @@
-.celebration-notification{
-    position: fixed;
-    top: 40%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 250;
-    color: aqua;
-    font-size: 3rem;
-    width: 100%;
-    background-color: #000000CC;
-    animation: fade 3s linear;
+.celebration-notification {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 250;
+  color: aqua;
+  font-size: 3rem;
+  width: 100%;
+  background-color: #000000cc;
+  animation: fade 3s linear;
 }
-.celebration-notification > p > span{
-    color: greenyellow;
-    font-size: 4rem;
+.celebration-notification > p {
+  margin-bottom: 10px;
 }
+
+.celebration-notification > p > span {
+  color: greenyellow;
+  font-size: 4rem;
+}
+
+.celebration-notification > button {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
 @keyframes fade {
-    0%{
-        opacity: 0;
-    }100%{
-        opacity: 1;
-    }
-    
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

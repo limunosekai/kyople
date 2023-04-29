@@ -8,6 +8,7 @@
 }
 
 .letter-text {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 600;
+  white-space: pre;
 }

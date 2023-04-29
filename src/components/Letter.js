@@ -11,10 +11,6 @@ const Letter = () => {
   soundEffect.autoplay = true;
   soundEffect.src = "audio/letter.mp3";
 
-  const handleClick = () => {
-    soundEffect.play();
-  };
-
   return (
     <>
       <Confetti width={width} height={height} />
@@ -28,9 +24,8 @@ const Letter = () => {
           iteration="infinite"
           fillMode="none"
         >
-          <span className="letter-text">{`축하합니다 !\n임성현에게 상품을 받으세요`}</span>
+          <span className="letter-text">{`축하합니다 !\n임성현에게 상품을 받으세요 🎉`}</span>
         </MovingComponent>
-        <button onClick={handleClick}>받기</button>
       </div>
     </>
   );

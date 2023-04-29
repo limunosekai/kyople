@@ -98,11 +98,12 @@ const Game = () => {
   useEffect(() => {
     if (matched === cards.length && turns) {
       // Game over
-      const m_highscore = window.localStorage.getItem("highscore");
+      // const m_highscore = window.localStorage.getItem("highscore");
+      const m_highscore = null;
       handleTime(false);
       if (m_highscore === null || turns < Number(m_highscore)) {
         // New highscore
-        window.localStorage.setItem("highscore", turns);
+        // window.localStorage.setItem("highscore", turns);
         soundEffect.src = "audio/celebration.mp3";
         soundEffect.play();
         setCelebrationStatus(true);
@@ -114,8 +115,8 @@ const Game = () => {
   useEffect(() => {
     shuffledCards();
     // Load highscore value from localstorage
-    const m_highscore = window.localStorage.getItem("highscore") || 0;
-    setHighScore(m_highscore);
+    // const m_highscore = window.localStorage.getItem("highscore") || 0;
+    // setHighScore(m_highscore);
   }, []);
 
   return (

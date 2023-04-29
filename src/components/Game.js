@@ -5,11 +5,11 @@ import "./Game.css";
 
 const cardImages = [
   { src: "/img/1.JPG", matched: false },
-  { src: "/img/2.jpg", matched: false },
-  { src: "/img/3.jpg", matched: false },
-  { src: "/img/4.jpg", matched: false },
-  { src: "/img/5.jpg", matched: false },
-  { src: "/img/6.jpg", matched: false },
+  { src: "/img/2.JPG", matched: false },
+  { src: "/img/3.JPG", matched: false },
+  { src: "/img/4.JPG", matched: false },
+  { src: "/img/5.JPG", matched: false },
+  { src: "/img/6.JPG", matched: false },
 ];
 
 const Game = () => {
@@ -123,7 +123,7 @@ const Game = () => {
       {celebrationStatus && (
         <Celebration highscore={highScore} time={elapsedTime} />
       )}
-      <h1>A&A Match</h1>
+      <h1>KYOPLE GAME</h1>
       <button onClick={shuffledCards}>New Game</button>
 
       <div className="card-grid">
@@ -137,15 +137,9 @@ const Game = () => {
           />
         ))}
       </div>
-      <p>Turns: {turns}</p>
-      <p>HighScore: {highScore}</p>
-      <p>Time Elapsed: {elapsedTime || "Not started"}</p>
-
-      <div id="views">
-        <p>
-          This memory got <span id="visits"></span> views.
-        </p>
-      </div>
+      <p>🚀 시도횟수: {turns}</p>
+      <p>🤖 최고점수: {highScore}</p>
+      <p>⏰ 경과시간: {elapsedTime || 0}</p>
     </div>
   );
 };

@@ -1,10 +1,14 @@
 import { useWindowSize } from "react-use";
+import { useNavigate } from "react-router-dom";
 import Confetti from "react-confetti";
 import "./Celebration.css";
 
 export default function Celebration({ highscore, time }) {
   const { width, height } = useWindowSize();
-  const handleClick = () => {};
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/letter");
+  };
 
   return (
     <>
@@ -12,11 +16,11 @@ export default function Celebration({ highscore, time }) {
       <div className="celebration-container">
         <div className="celebration-notification">
           <p>
-            Highscore achieved: <span>{highscore}</span>
+            최고점수: <span>{highscore}</span>
             <br />
-            Time Taken: <span>{time}s</span>
+            경과시간: <span>{time}s</span>
           </p>
-          <button onClick={handleClick}></button>
+          <button onClick={handleClick}>다음</button>
         </div>
       </div>
     </>
